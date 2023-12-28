@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 
-function Card({cart,setCart}) {
+function Card({data,cart,setCart}) {
 
     let [toggle,setToggle] = useState(true)
 
@@ -16,10 +16,10 @@ function Card({cart,setCart}) {
       <div className="card-body p-4">
           <div className="text-center">
               {/* <!-- Product name--> */}
-              <h5 className="fw-bolder">Sale Item</h5>
+              <h5 className="fw-bolder">{data.product}</h5>
               {/* <!-- Product price--> */}
               <span className="text-muted text-decoration-line-through">$50.00</span>
-              $25.00
+              {data.price}
           </div>
       </div>
       {/* <!-- Product actions--> */}
